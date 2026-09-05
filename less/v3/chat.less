@@ -140,7 +140,7 @@
       border-block: 1px dashed var(--dnd5e-color-blue-gray-3);
       font-size: var(--font-size-11);
       margin-inline: -8px;
-      padding-inline: 16px;
+      padding-inline: 8px;
       text-align: justify;
 
       &.collapsed { border: none; }
@@ -299,11 +299,9 @@
 
     /* Targets */
     .icon-row > button.target-source-toggle {
-      align-self: stretch;
-      block-size: unset;
       color: var(--dnd5e-color-gold);
       font-size: var(--font-size-12);
-      inline-size: 1.25em;
+      inline-size: var(--button-size);
 
       &::before {
         content: "\f140";
@@ -312,13 +310,6 @@
       }
 
       &[data-mode=selected]::before { content: "\f065"; }
-
-      &:hover:not(:disabled), &:focus {
-        box-shadow: none;
-        text-shadow: 0 0 5px var(--color-shadow-highlight);
-      }
-
-      &:disabled:hover { text-shadow: none; }
     }
 
     /* Deltas */
